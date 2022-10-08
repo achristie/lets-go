@@ -18,6 +18,10 @@ type snippetCreateForm struct {
 	validator.Validator
 }
 
+func ping(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("OK"))
+}
+
 func (a *application) home(w http.ResponseWriter, r *http.Request) {
 
 	snippets, err := a.snippets.Latest()

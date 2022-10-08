@@ -22,7 +22,7 @@ type config struct {
 type application struct {
 	errorLog      *log.Logger
 	infoLog       *log.Logger
-	snippets      *models.SnippetModel
+	snippets      models.SnippetModelInterface
 	templateCache map[string]*template.Template
 }
 
